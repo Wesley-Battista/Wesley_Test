@@ -1,0 +1,38 @@
+h1{
+    color: rgb(213, 199, 241);
+}
+*{padding: 0;margin: 0;box-sizing:border-box ;font-family: Arial, Helvetica, sans-serif;}
+/*Cabeçalho*/
+header{
+    background-color: rgb(3, 7, 91);
+    color: aliceblue;
+    padding: 50px;
+    text-align: center;
+}
+/*Grid de produtos*/
+.container{
+    background-color: aliceblue;
+    min-height: 60vh;
+    padding: 50px;
+    
+}
+
+.card{
+    width: 31%;
+    display: inline-block;
+}
+
+footer{
+    background-color: red;
+    color: aliceblue;
+    border: 3px solid #0f642f;
+    padding: 31px;
+    margin-top: 93px;
+}
+.products-container{
+    margin-top: 40px;
+}
+
+html{
+    background-color: rgb(149, 243, 240);
+}
