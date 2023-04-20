@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    font-family: Helvetica;
+}
+
+.titulo{
+    background-color: rgb(115, 33, 111);
+    padding: 20px;
+    color: #000000;
+    color: #fff;
+    font-size: 45px;
+}
+
+.todo{
+    background-color: #e0e0e0;
+    width: 650px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    border: 15px solid #3b30d3;
+    
+}
+
+.inside{
+    width: 600px;
+    background-color: #425bd6;
+    padding: 10px;
+    color: #fff;
+   
+}
+
+.rodapé{
+    background: rgb(126, 32, 32);
+    padding: 20px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.input{
+    background-color: #e0e0e0;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.botao{
+    background-color: #e0e0e0;
+    border: 2px solid black;
+}
+.p{
+    background-color: #e0e0e0;
+    color: #0000008d;
+    width: auto;
+    margin: 20px;
+    
+}

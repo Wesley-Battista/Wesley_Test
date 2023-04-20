@@ -1,0 +1,78 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <title>Calculadora de Sólidos</title>
+       <link rel="stylesheet" href="atividadesWesley.css">
+       <script src="atividadesWesley.js"></script>
+   </head>
+        
+            
+   <body class="corpo">
+    <center>
+        <h1 class="titulo">Calculadora</h1>
+        <div class="todo">
+            <div class="inside">
+        <h1>Calculadora do Cubo</h1>
+        <br>
+         <label for="inputNumber">numero:</label>
+            <input class="input" type="number" id="inputNumber">
+            <button class="botao" onclick="calcularCubo()">Calcular o Cubo</button>
+    <p class="p" id="resultado"></p>
+            </div>
+    <br>
+        <div class="inside">
+        <h1>Conversor de Temperatura</h1>
+        <br>
+        <label for="inputFahrenheit">Digite a temperatura em Fahrenhei(F):</label>
+            <input class="input" type="number" id="inputFahrenheit">
+            <button class="botao" onclick="converterParaCelsius()">Converter</button>
+    <p class="p" id="resultado2"></p>
+        </div>
+    <br>
+        <div class="inside">
+        <h1>Calculadora do triângulo</h1>
+        <br>
+        <label for="inputBase">Base:</label>
+            <input class="input" type="number" id="inputBase">
+        <label for="inputAltura">Altura:</label>
+            <input class="input" type="number" id="inputAltura">
+             <button class="botao" onclick="calcularTriangulo()">Calcular Área</button>
+     <p class="p" id="resultado3"></p>
+        </div>
+     <br>
+        <div class="inside">
+     <h1>Calculadora do Círculo</h1>
+     <br>
+     <label for="inputRaio">Raio:</label>
+        <input class="input" type="number" id="inputRaio">
+        <button class="botao" onclick="calcularCirculo()">Calcular</button>
+<p class="p" id="resultadoArea"></p>
+<p class="p" id="resultadoPerimetro"></p>
+        </div>
+<br>    
+        <div class="inside">
+    <h1>Verificador de Maioridade</h1>
+    <br>
+        <label for="inputAnoNascimento">Ano de Nascimento:</label>
+         <input class="input" type="number" id="inputAnoNascimento">
+         <button class="botao" onclick="verificarMaioridade()">Verificar</button>
+    <p class="p" id="resultado4"></p>
+        </div>
+    <br>
+        <div class="inside">
+    <h1>Calculadora de Combustível</h1>
+    <br>
+        <label for="inputDinheiro">Quanto dinheiro você tem? (R$)</label>
+            <input class="input" type="number" id="inputDinheiro">
+            <button class="botao" onclick="calcularCombustivel()">Calcular</button>
+            <p class="p" id="litrosCombustivel"></p>
+            <p class="p"id="quilometrosPercurso"></p>
+            </div>
+        </div>
+       
+   </body>
+           
+</html>
