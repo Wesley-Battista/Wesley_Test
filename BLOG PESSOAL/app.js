@@ -123,10 +123,13 @@ criarUsuarioInicial();
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/home.html'));
 app.use(express.static(__dirname + '/css'));
+app.use(express.urlencoded({ extended: true}));
 app.use('/assets', express.static(__dirname + '/assets'));
 app.get('/sobre', (req, res) => res.sendFile(__dirname + '/sobre.html'));
 app.get('/contato', (req, res) => res.sendFile(__dirname + '/contato.html'));
 app.get('/postagens', (req, res) => res.sendFile(__dirname + '/postagens.html'));
+app.get('/CR7', (req, res) => res.sendFile(__dirname + '/CR7.html'));
+app.get('/D_S', (req, res) => res.sendFile(__dirname + '/D_S.html'));
 app.get('/login', (req, res) => res.sendFile(__dirname + '/login.html'));
 app.use(express.static(__dirname + '/css'))
 
