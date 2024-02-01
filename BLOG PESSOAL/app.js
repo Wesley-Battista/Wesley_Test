@@ -89,7 +89,7 @@ function verificaAutenticacao(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect('/admin');
+    res.redirect('/home');
 }
 
 const criarUsuarioInicial = async () => {
@@ -121,9 +121,9 @@ const criarUsuarioInicial = async () => {
 
 criarUsuarioInicial();
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/home.html'));
+app.get('/home', (req, res) => res.sendFile(__dirname + '/home.html'));
 app.use(express.static(__dirname + '/css'));
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use('/assets', express.static(__dirname + '/assets'));
 app.get('/sobre', (req, res) => res.sendFile(__dirname + '/sobre.html'));
 app.get('/contato', (req, res) => res.sendFile(__dirname + '/contato.html'));
@@ -135,22 +135,24 @@ app.use(express.static(__dirname + '/css'))
 
 app.post('/login',
     passport.authenticate('local', {
-        successRedirect: '/',
-        failureRedirect: '/erro',
+        successRedirect: '/home',    // Redireciona para '/home' em caso de login bem-sucedido
+        failureRedirect: '/erro',    // Redireciona para '/erro' em caso de falha no login
         failureFlash: true
     })
 );
 
-app.get('/admin/painel', verificaAutenticacao, (req, res) => res.sendFile(__dirname + '/home.html'));
+// Rota da página inicial (requer autenticação)
+app.get('/', verificaAutenticacao, (req, res) => res.sendFile(__dirname + '/home.html'));
 
 /// Rota para fazer logout
 
 
 
 app.get('/admin/logout', (req, res) => {
-    req.session.destroy(()=> {
-    res.redirect('/admin');});
+    req.session.destroy(() => {
+        res.redirect('/admin');
+    });
 });
- 
+
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
